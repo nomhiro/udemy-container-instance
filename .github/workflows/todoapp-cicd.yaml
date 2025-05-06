@@ -56,4 +56,4 @@ jobs:
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: todo-app
         location: 'japan east'
-        ports: 80
+        ports: 3000
