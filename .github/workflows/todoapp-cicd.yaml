@@ -56,5 +56,4 @@ jobs:
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: todo-app
         location: 'japan east'
-        log-analytics-workspace: LogAnalytics-ContainerCICD
         ports: 443
