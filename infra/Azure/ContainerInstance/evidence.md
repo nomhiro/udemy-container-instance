@@ -72,7 +72,7 @@ az role assignment create --assignee b0dee88a-3bb1-4cc2-bfc7-ed03cfc65ced --scop
 - COSMOS_DB_ENDPOINT
   - https://cosmos-todos.documents.azure.com:443/
 - COSMOS_DB_KEY
-  - CLy7PO17HUK89zvO8jNVxzSQS2PArOONPJK1xroXlxpz8JdiUprsoJmkFqrB2oWuLXycBP1zEiMBACDb6s1vvQ==
+  - COSMOS DBのキー
 
 ![alt text](image-8.png)
 
