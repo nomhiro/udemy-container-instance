@@ -78,3 +78,7 @@ az role assignment create --assignee b0dee88a-3bb1-4cc2-bfc7-ed03cfc65ced --scop
 
 ## GitHubActionsのワークフローを作成
 ```yaml
+```
+
+## Log Analytics
+![alt text](image-9.png)
