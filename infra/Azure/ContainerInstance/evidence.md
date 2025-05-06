@@ -54,10 +54,27 @@ az role assignment create --assignee b0dee88a-3bb1-4cc2-bfc7-ed03cfc65ced --scop
 ```
 
 ## 資格情報を GitHub リポジトリに保存
-- AZURE_CREDENTIALS
-- REGISTRY_LOGIN_SERVER
-- REGISTRY_USERNAME
-- REGISTRY_PASSWORD
-- RESOURCE_GROUP
 
 ![alt text](image-7.png)
+
+- AZURE_CREDENTIALS
+  - Azure CLI で取得したサービスプリンシパルの資格情報を JSON 形式で保存
+- REGISTRY_LOGIN_SERVER
+  - Azure Container Registry のログイン サーバーの URL を保存
+  - acrudemylearn-b6gjgtfqcpedffhj.azurecr.io
+- REGISTRY_USERNAME
+  - acrudemylearn
+- REGISTRY_PASSWORD
+  - ACRのパスワード
+  - iNBEZZwjhXeC5QWODKNetZp1PeuniRqZV946y/m+Xx+ACRChSES0
+- RESOURCE_GROUP
+  - udemy-container-cicd
+- COSMOS_DB_ENDPOINT
+  - https://cosmos-todos.documents.azure.com:443/
+- COSMOS_DB_KEY
+  - CLy7PO17HUK89zvO8jNVxzSQS2PArOONPJK1xroXlxpz8JdiUprsoJmkFqrB2oWuLXycBP1zEiMBACDb6s1vvQ==
+
+![alt text](image-8.png)
+
+## GitHubActionsのワークフローを作成
+```yaml
