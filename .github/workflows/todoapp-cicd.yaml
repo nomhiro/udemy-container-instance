@@ -28,7 +28,10 @@ jobs:
         login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
-    - run: |
+      env:
+        COSMOS_DB_ENDPOINT: ${{ secrets.COSMOS_DB_ENDPOINT }}
+        COSMOS_DB_KEY: ${{ secrets.COSMOS_DB_KEY }}
+      run: |
         docker-compose -f docker-compose.prod.yml build \
           --build-arg COSMOS_DB_ENDPOINT=${COSMOS_DB_ENDPOINT} \
           --build-arg COSMOS_DB_KEY=${COSMOS_DB_KEY}
