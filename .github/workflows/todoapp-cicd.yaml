@@ -38,7 +38,7 @@ jobs:
         docker-compose -f docker-compose.prod.yml build \
           --build-arg COSMOS_DB_ENDPOINT=${COSMOS_DB_ENDPOINT} \
           --build-arg COSMOS_DB_KEY=${COSMOS_DB_KEY}
-        docker tag todo-app:latest ${{ secrets.REGISTRY_LOGIN_SERVER }}/todoapp:${{ github.sha }}
+        docker tag todo-app:latest ${{ secrets.REGISTRY_LOGIN_SERVER }}/todo-app:${{ github.sha }}
         docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/todo-app:${{ github.sha }}
 
     - name: 'Deploy to Azure Container Instances'
@@ -46,7 +46,7 @@ jobs:
       with:
         resource-group: ${{ secrets.RESOURCE_GROUP }}
         dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}
-        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/todoapp:${{ github.sha }}
+        image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/todo-app:${{ github.sha }}
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
